@@ -31,14 +31,15 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-sudo pmset repeat wake MTWRFSU 6:00:00
-
+# Show IP, Hostname, Build# on lockscreen when clock is clicked
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 ###############################################################################
 # Energy saving                                                               #
 ###############################################################################
 
+# Automatically wake every day at 6:00 AM
+sudo pmset repeat wake MTWRFSU 6:00:00
 
 # Restart automatically on power loss
 sudo pmset -a autorestart 1
