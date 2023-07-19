@@ -52,6 +52,9 @@ sudo pmset -a displaysleep 120
 # Disable machine sleep while charging
 sudo pmset -c sleep 0
 
+# Never go into computer sleep mode
+sudo systemsetup -setcomputersleep Off > /dev/null
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
