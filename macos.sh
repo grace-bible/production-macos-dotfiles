@@ -63,7 +63,7 @@ sudo pmset repeat wake MTWRFSU 6:00:00
 # Restart automatically on power loss
 sudo pmset -a autorestart 1
 
-# Sleep the display after 15 minutes
+# Sleep the display after 120 minutes
 sudo pmset -a displaysleep 120
 
 # Disable machine sleep while charging
