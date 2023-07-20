@@ -14,6 +14,25 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
+# Updates                                                                     #
+###############################################################################
+
+# Enable Automatic App Store Updates
+defaults write /Library/Preferences/com.apple.commerce.plist AutoUpdate -bool true 
+
+# Enable Automatic Security Updates
+defaults write /Library/Preferences/com.apple.SoftwareUpdate CriticalUpdateInstall -bool true 
+
+# Automatically check for updates
+defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true 
+
+# Automatically download updates
+defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool true 
+
+# Disable General Auto-updates
+defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool false 
+
+###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
 
